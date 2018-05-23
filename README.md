@@ -1,6 +1,6 @@
 # Guide to Setup a Vagrant Environment for Ubuntu 16, Rails 5 and PostgreSQL
 
-Feel free to use this guide to setup
+Feel free to clone this repository, use it or fork it.
 
 I know much of this can be automated. A previous version had things like RVM installed automatically via the Vagrantfile, but then some of the dependencies broke.
 
@@ -9,6 +9,20 @@ This guide can be used in lieu of a "vagrant init" as it has no puppet dependenc
 Hat tip to this helpful guide:
 
 https://gorails.com/setup/ubuntu/16.04
+
+## Git Checkout this repo -- the Vagrantfile and README
+
+```
+git clone git@github.com:sbraford/vagrant-xenial64-rails5-postgresql.git
+cd vagrant-xenial64-rails5-postgresql
+```
+
+## Start the Vagrant VM
+
+```bash
+vagrant up
+```
+
 
 ## Ruby, Git, Node, Yarn and Dependencies
 
@@ -124,6 +138,5 @@ If you got something out of this, and are working on an interesting side-project
 Learn more about my side-project incubator, Timewalk Ventures, at:
 
 [https://timewalkventures.com](https://timewalkventures.com)
-
 
 
