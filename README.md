@@ -17,10 +17,11 @@ git clone git@github.com:sbraford/vagrant-xenial64-rails5-postgresql.git
 cd vagrant-xenial64-rails5-postgresql
 ```
 
-## Start the Vagrant VM
+## Start the Vagrant VM and Login to It
 
 ```bash
 vagrant up
+vagrant ssh
 ```
 
 
