@@ -110,6 +110,10 @@ This probably isn't necessary (it should start automatically), but the command t
 sudo su - postgres
 vi /etc/postgresql/9.5/main/pg_hba.conf
 # search for peer, change "local all postgres peer" to "local all postgres md5" or on local vagrant "local all all trust"
+
+createuser vagrant -s --pwprompt
+# You can just leave the password blank unless you're concerned about security.
+
 exit
 ```
 
@@ -121,23 +125,9 @@ sudo service postgresql restart
 
 ```bash
 sudo -u postgres psql
-createuser vagrant --pwprompt
-# You can just leave the password blank unless you're concerned about security.
 postgres=# ALTER USER vagrant CREATEDB LOGIN;
 ```
 
 ## Ready to Rock n Roll
 
 You should now be ready to create your rails app or check an existing one out from GitHub.
-
-## Social Media Plug
-
-If you got something out of this, and are working on an interesting side-project / startup or just want to connect, feel free to follow me on Twitter, etc:
-
-[https://twitter.com/TimewalkVenture](https://twitter.com/TimewalkVenture)
-
-Learn more about my side-project incubator, Timewalk Ventures, at:
-
-[https://timewalkventures.com](https://timewalkventures.com)
-
-
