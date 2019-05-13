@@ -1,4 +1,4 @@
-# Guide to Setup a Vagrant Environment for Ubuntu 16, Rails 5 and PostgreSQL
+# Guide to Setup a Vagrant Environment for Ubuntu 18.04, Rails 5 and PostgreSQL
 
 Feel free to clone this repository, use it or fork it.
 
@@ -8,13 +8,13 @@ This guide can be used in lieu of a "vagrant init" as it has no puppet dependenc
 
 Hat tip to this helpful guide:
 
-https://gorails.com/setup/ubuntu/16.04
+https://gorails.com/setup/ubuntu/18.04
 
 ## Git Checkout this repo -- the Vagrantfile and README
 
 ```
-git clone git@github.com:sbraford/vagrant-xenial64-rails5-postgresql.git
-cd vagrant-xenial64-rails5-postgresql
+git clone git@github.com:sbraford/vagrant-bionic64-rails5-postgresql.git
+cd vagrant-bionic64-rails5-postgresql
 ```
 
 ## Start the Vagrant VM and Login to It
@@ -42,14 +42,14 @@ sudo apt-get update
 sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs yarn libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
 ```
 
-## Install RVM and Ruby 2.5.1
+## Install RVM and Ruby 2.6.3
 
 ```bash
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 curl -sSL https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
-rvm install 2.5.1
-rvm use 2.5.1 --default
+rvm install 2.6.3
+rvm use 2.6.3 --default
 ruby -v
 echo "gem: --no-document" > ~/.gemrc
 ```
@@ -82,7 +82,7 @@ If you see, *"Hi your-github-username! You've successfully authenticated, but Gi
 ## Install Rails and Bundler
 
 ```bash
-gem install rails -v 5.2.0
+gem install rails -v 5.2.3
 rails -v
 gem install bundler
 ```
